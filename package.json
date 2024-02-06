@@ -1,0 +1,26 @@
+{
+  "name": "teams-call-logger",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.1.0",
+    "@azure/identity": "^4.0.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "durable-functions": "^3.0.0"
+  },
+  "devDependencies": {
+    "@microsoft/microsoft-graph-types": "^2.40.0",
+    "@types/node": "^20.x",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  },
+  "main": "dist/src/functions/*.js"
+}
